@@ -19,5 +19,8 @@ function fun(){
 };
 let btn = document.querySelector(".copy");
 btn.addEventListener("click",function(){
-    let copi = color;
+    navigator.clipboard.writeText(color)
+    .then(()=>{
+        console.log("color is copied");
+    })
 });
